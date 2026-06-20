@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM Sans:wght@500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -24,6 +24,7 @@ body {
   top: 690px;
   left: 16px;
   z-index: 99;
+  font-family: "DM Sans", sans-serif;
 }
 
 .card-content {
@@ -33,6 +34,7 @@ body {
   color: #FFFFFFDD;
   padding-left: 16px;
   will-change: transform, opacity;
+  font-family: "DM Sans", sans-serif;
 }
 
 .content-place {
@@ -45,7 +47,7 @@ body {
 .content-title-2 {
   font-weight: 600;
   font-size: 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.15;
 }
 
@@ -64,7 +66,7 @@ body {
   right: 60px;
   max-width: 560px;
   will-change: transform, opacity;
-}
+} 
 .details .place-box {
   height: 46px;
   overflow: hidden;
@@ -73,6 +75,7 @@ body {
   padding-top: 16px;
   font-size: 20px;
   position: relative;
+  font-family: "DM Sans", sans-serif;
 }
 .details .place-box .text:before {
   top: 0;
@@ -88,7 +91,7 @@ body {
 .details .title-2 {
   font-weight: 600;
   font-size: clamp(36px, 8vw, 72px);
-  font-family: "Oswald", sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.1;
   white-space: nowrap;
 }
@@ -103,12 +106,14 @@ body {
   max-width: 500px;
   font-size: clamp(13px, 1.6vw, 15px);
   line-height: 1.5;
+  font-family: "DM Sans", sans-serif;
 }
 .details > .cta {
   max-width: 500px;
   margin-top: 24px;
   display: flex;
   align-items: center;
+  font-family: "DM Sans", sans-serif;
 }
 .details > .cta > .bookmark {
   border: none;
@@ -210,7 +215,7 @@ nav > div:last-child > div:not(.svg-container) {
   display: inline-flex;
   align-items: center;
   will-change: transform, opacity;
-  display: none;
+  display: none ;
 }
 .pagination > .arrow {
   z-index: 60;
