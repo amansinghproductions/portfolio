@@ -574,7 +574,7 @@ body:hover .cursor-follower { opacity: 1; }
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 6rem;
+  /*gap: 6rem;*/
   align-items: start;
 }
 .contact-sub { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 2.5rem; max-width: 38ch; }

@@ -503,7 +503,7 @@ function step() {
 }
 
 async function loop() {
-  await animate(".indicator", 15, { x: 0 });
+  await animate(".indicator", 20, { x: 0 });
 
   await animate(".indicator", 1.2, {
     x: window.innerWidth,
@@ -514,7 +514,7 @@ async function loop() {
 
   await step();
 
-  setTimeout(loop, 1500);
+  setTimeout(loop, 2000);
 }  
 
 async function loadImage(src) {
