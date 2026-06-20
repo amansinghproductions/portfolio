@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.6);
+  will-change: transform, width, height;
+}
+
+#btn {
+  position: absolute;
+  top: 690px;
+  left: 16px;
+  z-index: 99;
+}
+
+.card-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFFFFFDD;
+  padding-left: 16px;
+  will-change: transform, opacity;
+}
+
+.content-place {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.content-title-1,
+.content-title-2 {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.15;
+}
+
+.content-start {
+  width: 30px;
+  height: 5px;
+  border-radius: 99px;
+  background-color: #FFFFFFDD;
+}
+
+.details {
+  z-index: 22;
+  position: absolute;
+  top: 240px;
+  left: 60px;
+  right: 60px;
+  max-width: 560px;
+  will-change: transform, opacity;
+}
+.details .place-box {
+  height: 46px;
+  overflow: hidden;
+}
+.details .place-box .text {
+  padding-top: 16px;
+  font-size: 20px;
+  position: relative;
+}
+.details .place-box .text:before {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: white;
+}
+.details .title-1,
+.details .title-2 {
+  font-weight: 600;
+  font-size: clamp(36px, 8vw, 72px);
+  font-family: "Oswald", sans-serif;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.details .title-box-1,
+.details .title-box-2 {
+  margin-top: 2px;
+  height: clamp(44px, 9vw, 100px);
+  overflow: hidden;
+}
+.details > .desc {
+  margin-top: 16px;
+  max-width: 500px;
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 1.5;
+}
+.details > .cta {
+  max-width: 500px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+.details > .cta > .bookmark {
+  border: none;
+  background-color: #ecad29;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 99px;
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.details > .cta > .bookmark svg {
+  width: 20px;
+  height: 20px;
+}
+.details > .cta > .discover {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  height: 36px;
+  border-radius: 99px;
+  color: #ffffff;
+  padding: 4px 24px;
+  font-size: 12px;
+  margin-left: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 36px;
+  font-weight: 500;
+}
+nav svg {
+  width: 20px;
+  height: 20px;
+}
+nav .svg-container {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+nav > div {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+nav > div:first-child {
+  gap: 10px;
+}
+nav > div:last-child {
+  gap: 24px;
+}
+nav > div:last-child > .active {
+  position: relative;
+}
+nav > div:last-child > .active:after {
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  height: 3px;
+  border-radius: 99px;
+  background-color: #ecad29;
+}
+
+/* Links that collapse on small screens, keeping logo + search + profile icons */
+nav > div:last-child > div:not(.svg-container) {
+  display: inline-block;
+}
+
+.indicator {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5px;
+  z-index: 60;
+  background-color: #ecad29;
+  will-change: transform;
+}
+
+.pagination {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: inline-flex;
+  align-items: center;
+  will-change: transform, opacity;
+  display: none;
+}
+.pagination > .arrow {
+  z-index: 60;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 999px;
+  border: 2px solid #ffffff55;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.pagination > .arrow:nth-child(2) {
+  margin-left: 20px;
+}
+.pagination > .arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  color: #ffffff99;
+}
+.pagination .progress-sub-container {
+  margin-left: 24px;
+  z-index: 60;
+  width: 500px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.pagination .progress-sub-container .progress-sub-background {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff33;
+}
+.pagination .progress-sub-container .progress-sub-background .progress-sub-foreground {
+  height: 3px;
+  background-color: #ecad29;
+}
+.pagination .slide-numbers {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  overflow: hidden;
+  z-index: 60;
+  position: relative;
+}
+.pagination .slide-numbers .item {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  will-change: transform;
+}
+
+.cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+  will-change: transform;
+}
+
+/* =========================================================
+   Mobile breakpoint (<= 760px)
+   JS recalculates card/offset math at this same breakpoint —
+   keep it in sync with isMobile() in script.js
+   ========================================================= */
+@media (max-width: 760px) {
+  nav {
+    padding: 16px 20px;
+  }
+  nav > div:first-child > div:last-child {
+    font-size: 12px;
+  }
+  /* Hide the middle nav links, keep logo + search + profile */
+  nav > div:last-child > div:not(.svg-container):not(.active) {
+    display: none;
+  }
+  nav > div:last-child > .active {
+    font-size: 12px;
+  }
+  nav > div:last-child {
+    gap: 14px;
+  }
+
+  .details {
+    top: 88px;
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+  .details .place-box .text {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+  .details .title-1,
+  .details .title-2 {
+    font-size: clamp(30px, 11vw, 44px);
+  }
+  .details .title-box-1,
+  .details .title-box-2 {
+    height: clamp(34px, 12vw, 50px);
+  }
+  .details > .desc {
+    margin-top: 10px;
+    max-width: none;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .details > .cta {
+    margin-top: 16px;
+    max-width: none;
+  }
+  .details > .cta > .bookmark {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+  .details > .cta > .bookmark svg {
+    width: 16px;
+    height: 16px;
+  }
+  .details > .cta > .discover {
+    height: 32px;
+    padding: 4px 16px;
+    font-size: 11px;
+  }
+
+  .content-place {
+    font-size: 9px;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .content-title-1,
+  .content-title-2 {
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .content-start {
+    width: 14px;
+    height: 3px;
+  }
+  .card-content {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: var(--card-w, 110px);
+    box-sizing: border-box;
+  }
+
+  .pagination > .arrow {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+  .pagination > .arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+  .pagination > .arrow:nth-child(2) {
+    margin-left: 10px;
+  }
+  .pagination .progress-sub-container {
+    margin-left: 10px;
+    height: 36px;
+    width: auto;
+    flex: 1;
+  }
+  .pagination .slide-numbers {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .details .desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
