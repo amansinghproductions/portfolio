@@ -18,9 +18,9 @@
   --muted:     #888888;
   --accent:    #c8a96e;     /* warm gold */
   --accent2:   #e05a4b;     /* cinematic red */
-  --font-display: 'Bebas Neue', sans-serif;
+  /*--font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', Georgia, serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-body:    'DM Sans', sans-serif;*/
   --max-w: 1280px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -92,7 +92,7 @@ body:hover .cursor-follower { opacity: 1; }
 }
 .section-title em {
   font-family: var(--font-serif);
-  font-style: italic;
+  font-style: normal;
   font-size: 1.05em;
   color: var(--accent);
 }
@@ -289,7 +289,7 @@ body:hover .cursor-follower { opacity: 1; }
 .hero-title .line { display: block; overflow: hidden; }
 .hero-title .italic {
   font-family: var(--font-serif);
-  font-style: italic;
+  font-style: normal;
   font-size: 0.85em;
   color: var(--accent);
   padding-left: 4vw;
@@ -561,7 +561,7 @@ body:hover .cursor-follower { opacity: 1; }
   top: 0.5rem; left: 1.5rem;
   line-height: 1;
 }
-.testi-card p { font-family: var(--font-serif); font-size: 1.05rem; font-style: italic; line-height: 1.75; color: var(--off-white); margin-bottom: 2rem; }
+.testi-card p { font-family: var(--font-serif); font-size: 1.05rem; font-style: normal; line-height: 1.75; color: var(--off-white); margin-bottom: 2rem; }
 .testi-card footer { display: flex; align-items: center; gap: 1rem; }
 .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--bg3); border: 1px solid var(--border); flex-shrink: 0; }
 .testi-card strong { display: block; font-size: 0.85rem; font-weight: 500; color: var(--white); margin-bottom: 0.2rem; }
